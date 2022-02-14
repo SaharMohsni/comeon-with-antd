@@ -1,0 +1,86 @@
+@import '../../app/_mixins';
+
+.category-filter-section {
+	&__filter-section {
+		&__title {
+			font-weight: 700;
+			margin-bottom: 0 !important;
+			/* *** responsive design for large screen *** */
+			@include respond(large) {
+				@include fontSize(25px);
+			}
+			/* *** responsive design for medium screen *** */
+			@include respond(medium) {
+				@include fontSize(28px);
+			}
+			/* *** responsive design for small screen *** */
+			@include respond(small) {
+				@include fontSize(25px);
+			}
+			/* *** responsive design special breakpoint *** */
+			@media (min-width: 320px) and (max-width: 550px) {
+				@include fontSize(20px);
+			}
+		}
+		&__content {
+			padding: 20px 0;
+			height: 100%;
+			border-top: solid 1px rgb(212, 203, 203);
+			/* *** responsive design for small screen *** */
+			@include respond(small) {
+				display: flex;
+				overflow-x: scroll;
+				scrollbar-color: rgb(104, 172, 3) transparent;
+				scrollbar-width: thin;
+				padding: 0;
+				&::-webkit-scrollbar {
+					width: 5px;
+					height: 5px !important;
+				}
+
+				&::-webkit-scrollbar-track {
+					background-color: white;
+				}
+
+				&::-webkit-scrollbar-thumb {
+					background-color: rgb(104, 172, 3);
+				}
+			}
+			&__filter-element {
+				font-weight: bolder;
+				@include fontSize(23px);
+				cursor: pointer;
+				/* *** responsive design for large screen *** */
+				@include respond(large) {
+					@include fontSize(20px);
+				}
+				/* *** responsive design for medium screen *** */
+				@include respond(medium) {
+					@include fontSize(20px);
+				}
+				/* *** responsive design for small screen *** */
+				@include respond(small) {
+					@include fontSize(18px);
+					margin: 20px 10px;
+					color: white;
+					background-color: rgb(104, 172, 3);
+					padding: 5px;
+				}
+				/* *** responsive design special breakpoint *** */
+
+				@media (min-width: 320px) and (max-width: 550px) {
+					@include fontSize(10px);
+				}
+				&.is-clicked {
+					color: rgb(104, 172, 3);
+				}
+			}
+			&__filter-element:first-child {
+				/* *** responsive design for small screen *** */
+				@include respond(small) {
+					margin-left: 0 !important;
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,49 @@
+$html-font-size: 16px;
+
+@function rem-calc($size, $font-size : $html-font-size) {
+	$font-size: $font-size + 0px;
+	$remSize: $size / $font-size;
+	@return #{$remSize}rem;
+}
+
+@function em($pixels, $context: $html-font-size) {
+	@return #{$pixels/$context}em;
+}
+@mixin fontSize($size) {
+	font-size: em($size);
+}
+
+/* *** respond mixin function *** */
+@mixin respond($breakpoint) {
+	@if ($breakpoint==large) {
+		@media (min-width: 1367px) and (max-width: 1660px) {
+			@content;
+		}
+	}
+
+	@if ($breakpoint==customMedium) {
+		@media (min-width: 1101px) and (max-width: 1366px) {
+			@content;
+		}
+	}
+
+	@if ($breakpoint==medium) {
+		@media (min-width: 993px) and (max-width: 1366px) {
+			@content;
+		}
+	}
+
+	@if ($breakpoint==tablet) {
+		@media (min-width: 993px) and (max-width: 1100px) {
+			@content;
+		}
+	}
+
+	@if ($breakpoint==small) {
+		@media (min-width: 320px) and (max-width: 992px) {
+			@content;
+		}
+	}
+}
+
+// to use the mixin just import this file by " @import "__mixins.scss";" in the scss file then use the mixin by replacing the "font-size : Xpx;" by "@include  fontSize(Xpx);"

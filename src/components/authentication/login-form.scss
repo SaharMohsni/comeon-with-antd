@@ -1,0 +1,73 @@
+@import '../../app/_mixins';
+
+.login-form-container {
+	background-color: white;
+	width: 30%;
+	height: 60%;
+	box-shadow: 10px 10px 10px 10px;
+	/* *** responsive design for large screen *** */
+	@include respond(large) {
+		height: 70%;
+	}
+	/* *** responsive design for medium screen *** */
+	@include respond(medium) {
+		width: 40%;
+	}
+	/* *** responsive design for small screen *** */
+	@include respond(small) {
+		width: 50%;
+	}
+	/* *** responsive design for special screen *** */
+	@media (min-width: 320px) and (max-width: 500px) {
+		width: 100%;
+	}
+
+	&__header {
+		font-weight: 700;
+		@include fontSize(22px);
+		width: 60%;
+		margin-bottom: 30px;
+	}
+
+	.ant-form {
+		width: 60% !important;
+	}
+	.ant-form-item-control-input-content {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		/* *** responsive design for small screen *** */
+		@include respond(small) {
+			@include fontSize(12px);
+		}
+		/* *** responsive design for special screen *** */
+		@media (min-width: 320px) and (max-width: 500px) {
+			@include fontSize(10px);
+		}
+	}
+	a {
+		color: rgb(104, 172, 3);
+	}
+
+	.ant-btn,
+	.ant-btn-primary:focus,
+	.ant-btn-primary:hover {
+		border-color: rgb(104, 172, 3) !important;
+		background: rgb(104, 172, 3) !important;
+	}
+	.ant-checkbox-checked .ant-checkbox-inner {
+		background-color: rgb(104, 172, 3) !important;
+		border-color: rgb(104, 172, 3) !important;
+	}
+	.error-message {
+		color: red;
+		margin-bottom: 10px;
+		width: 60%;
+		&__content {
+			padding-left: 10px;
+		}
+		.ant-input {
+			border: solid red !important;
+		}
+	}
+}

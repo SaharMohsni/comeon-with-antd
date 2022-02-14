@@ -1,0 +1,42 @@
+@import '../../app/_mixins';
+.games-list {
+	margin-top: 50px;
+	display: grid;
+	grid-template-columns: 80% 18%;
+	column-gap: 2%;
+	min-height: 50vh;
+	/* *** responsive design for small screen *** */
+	@include respond(small) {
+		display: flex;
+		flex-direction: column-reverse;
+	}
+	/* *** responsive design special breakpoint *** */
+	@media (min-width: 320px) and (max-width: 550px) {
+		margin-top: 20px;
+	}
+	&__data {
+		&__title {
+			font-weight: 700;
+			margin-bottom: 0 !important;
+			/* *** responsive design for large screen *** */
+			@include respond(large) {
+				@include fontSize(25px);
+			}
+			/* *** responsive design for medium screen *** */
+			@include respond(medium) {
+				@include fontSize(28px);
+			}
+			/* *** responsive design for small screen *** */
+			@include respond(small) {
+				@include fontSize(25px);
+			}
+			/* *** responsive design special breakpoint *** */
+			@media (min-width: 320px) and (max-width: 550px) {
+				@include fontSize(20px);
+			}
+		}
+		&__content {
+			height: 100%;
+		}
+	}
+}

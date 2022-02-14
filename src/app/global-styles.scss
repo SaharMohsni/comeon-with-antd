@@ -1,0 +1,194 @@
+@import './_mixins';
+
+body {
+	background-color: #444;
+}
+.global-flex-h-any-v-center {
+	display: flex;
+	align-items: center;
+}
+.global-flex-h-any-v-start {
+	display: flex;
+	align-items: flex-start;
+}
+.global-flex-h-any-v-end {
+	display: flex;
+	align-items: flex-end;
+}
+
+.global-flex-h-end-v-any {
+	display: flex;
+	justify-content: flex-end;
+}
+
+.global-flex-h-center-v-any {
+	display: flex;
+	justify-content: center;
+}
+
+.global-flex-h-between-v-any {
+	display: flex;
+	justify-content: space-between;
+}
+
+.global-flex-h-between-v-end {
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-end;
+}
+
+.global-flex-h-center-v-center {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.global-flex-column-h-center-v-center {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+
+.global-flex-column-h-start-v-center {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	justify-content: center;
+}
+
+.global-flex-column-h-start-v-start {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	justify-content: flex-start;
+}
+.global-flex-column-h-start-v-end {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	justify-content: flex-end;
+}
+.global-flex-column-h-end-v-any {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-end;
+}
+
+.global-flex-h-end-v-center {
+	display: flex;
+	align-items: center;
+	justify-content: flex-end;
+}
+
+.global-flex-h-start-v-center {
+	display: flex;
+	align-items: center;
+	justify-content: flex-start;
+}
+.global-flex-h-start-v-any {
+	display: flex;
+	justify-content: flex-start;
+}
+
+.global-flex-h-between-v-center {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.global-flex-column-h-center-v-any {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.global-flex-column-h-any-v-center {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+.global-flex-column-h-star-v-any {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+}
+.global-flex-column-h-any-v-between {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.global-flex-column-h-any-v-start {
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+}
+
+.global-flex-h-between-v-start {
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-start;
+}
+
+.global-flex-h-around-v-center {
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+}
+
+.global-flex-column-h-center-v-start {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: flex-start;
+}
+.global-flex-column-h-center-v-end {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: flex-end;
+}
+.global-flex-h-between-v-any-wrap {
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+}
+
+.global-flex-h-start-v-any-wrap {
+	display: flex;
+	justify-content: flex-start;
+	flex-wrap: wrap;
+}
+
+.global-flex-h-start-v-start {
+	display: flex;
+	justify-content: flex-start;
+	align-items: flex-start;
+}
+.global-button {
+	.ant-btn {
+		height: 40px;
+		color: white !important;
+		color: rgba(0, 0, 0, .85);
+		border: 1px solid black;
+		background: black;
+		font-weight: 700;
+		@include fontSize(16px);
+	}
+}
+.global-page-css {
+	font-family: sans-serif !important;
+	width: 80%;
+	background-color: white;
+	margin: 0 auto;
+	padding: 2em 2em 7em;
+	min-height: calc(100vh - 255px);
+	/* *** responsive design for small screen *** */
+	@include respond(small) {
+		min-height: calc(100vh - 150px);
+	}
+}
+.global-required-field {
+	border: solid 1px red !important;
+}

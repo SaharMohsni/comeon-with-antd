@@ -1,0 +1,23 @@
+@import '../../../app/_mixins';
+
+.games-pages-header {
+	/* *** responsive design special breakpoint *** */
+	@media (min-width: 320px) and (max-width: 550px) {
+		flex-direction: column;
+	}
+	&__data-container {
+		&__player-details {
+			margin-left: 10px;
+		}
+	}
+	&__logout-button {
+		margin-top: 20px;
+	}
+	&__filter-by-search {
+		/* *** responsive design special breakpoint *** */
+		@media (min-width: 320px) and (max-width: 550px) {
+			margin-top: 50px;
+			align-self: center;
+		}
+	}
+}

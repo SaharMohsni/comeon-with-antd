@@ -1,0 +1,17 @@
+@import '../../_mixins';
+
+.top-bar {
+	height: 205px;
+	/* *** responsive design for small screen *** */
+	@include respond(small) {
+		height: auto;
+	}
+	&__log {
+		width: 60%;
+		padding: 5px 0 0 0;
+		/* *** responsive design for small screen *** */
+		@include respond(small) {
+			width: 100%;
+		}
+	}
+}

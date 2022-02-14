@@ -1,0 +1,12 @@
+.footer {
+	color: white;
+	height: 50px;
+	bottom: 0;
+	width: 100%;
+	&__copy-rights {
+		padding-right: 10px;
+	}
+	&__policy {
+		padding-left: 10px;
+	}
+}

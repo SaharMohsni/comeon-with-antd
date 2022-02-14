@@ -1,0 +1,11 @@
+@import '../../app/_mixins';
+
+.authentication {
+	width: 100%;
+	height: calc(100vh - 255px);
+	/* *** responsive design for small screen *** */
+	@include respond(small) {
+		padding: 0 8%;
+		height: calc(100vh - 150px);
+	}
+}
