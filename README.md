@@ -1,70 +1,65 @@
-# Getting Started with Create React App
+## Product Listing
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+#### Description
 
-## Available Scripts
+A web application presenting a games store. First access need that the user be connected using existing his login and his password.
+If the player is connected he will be redirected the games list page where he can choose the game that he want to play.
+In the header of the page we will found the player avatar and his data.
+the player can filter the games by name or by category listed on the page.
 
-In the project directory, you can run:
+the User can logout from this page and then be redirected to the login page.
 
-### `npm start`
+When he click on the game to play the user will be redirected the game page where the game will start loading.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+From the game page the player can go back to the games list page.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
 
-### `npm test`
+This project is built with React, Redux saga, Javascript, react-router, ant design, json-server for the apis and the data and sass using scss.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Responsive project.
 
-### `npm run build`
+## Project Status
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+This project is finished: development and documentation.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Installation and Setup Instructions
 
-### `npm run eject`
+Clone down this repository and the back-end repository. You will need `node` and `npm` installed globally on your machine.  
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+Installation:
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+`npm install`  
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+To Start Server:
 
-## Learn More
+`npm start`  
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+To Start the Front End :
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+`npm run start:dev`  
 
-### Code Splitting
+To Visit App:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+`localhost:3000`  
 
-### Analyzing the Bundle Size
+Don't forget to run the server before running the front end part.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
 
-### Making a Progressive Web App
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+## Reflection
 
-### Advanced Configuration
+This was a 4 days long project built during my technical test for the Front-End Developer position. Project goals development of a web game application responsive using react Javascript, redux-saga, scss and JSON-server. 
+ 
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+Managing time was my biggest challenge in this project because I was working on another at the same time.
 
-### Deployment
+At the end of the project, the technologies implemented was Javascript, React, React-Router, Redux-saga, LoDash, anted, and a significant amount of VanillaJS and scss for the front-end part. I chose to use the `create-react-app` boilerplate to minimize initial setup and invest more time in diving into weird technological rabbit holes.
+For the back-end part i used json-server.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
 
-### `npm run build` fails to minify
+In the next iteration the front-end part could be optimized on different devices and the application will became better after adding first loading and some other features like registration, forgot password and others.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Adding unit test is needed to make sure all the project is working without problems.
+
