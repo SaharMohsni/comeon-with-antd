@@ -19,15 +19,6 @@ const GameListPage = () => {
 	const dispatch = useDispatch();
 
 	useEffect(() => {
-		// if (window.location.pathname !== routes.GAMES_LIST.path) {
-		// 	window.location = setUrlPath(window.location.href, routes.GAMES_LIST.path);
-		// }
-		// try {
-		// 	const localStorageUserInfoFromToken = decryptToken(localStorage.getItem('token'));
-		// 	dispatch(getPlayerDataFromToken(localStorageUserInfoFromToken));
-		// } catch (error) {
-		// 	localStorage.removeItem('token');
-		// }
 		dispatch(fetchGames());
 		dispatch(fetchCategories());
 	}, []);
