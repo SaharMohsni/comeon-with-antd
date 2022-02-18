@@ -43,7 +43,7 @@
 				}
 
 				&::-webkit-scrollbar-thumb {
-					background-color: rgb(104, 172, 3);
+					background-color: rgb(219, 213, 213);
 				}
 			}
 			&__filter-element {
@@ -62,8 +62,8 @@
 				@include respond(small) {
 					@include fontSize(18px);
 					margin: 20px 10px;
-					color: white;
-					background-color: rgb(104, 172, 3);
+					color: black;
+					background-color: rgb(219, 213, 213);
 					padding: 5px;
 				}
 				/* *** responsive design special breakpoint *** */
@@ -72,7 +72,8 @@
 					@include fontSize(10px);
 				}
 				&.is-clicked {
-					color: rgb(104, 172, 3);
+					background-color: rgb(104, 172, 3);
+					color: white;
 				}
 			}
 			&__filter-element:first-child {
