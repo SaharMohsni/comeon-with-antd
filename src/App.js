@@ -11,7 +11,7 @@ import GameListPage from './pages/gamesListPage';
 import Layout from './app/Layout';
 import { getPlayerDataFromToken } from './features/actions/profile.actions';
 import PrivateRoute from './components/routes/PrivateRoute';
-
+import ErrorPage from './shared/components/errorPage';
 function App() {
 	const dispatch = useDispatch();
 	let token = localStorage.getItem('token');
@@ -35,6 +35,7 @@ function App() {
 					<Route exact path={routes.GAME.path} element={<PrivateRoute />}>
 						<Route exact path={routes.GAME.path} element={<GamePage />} />
 					</Route>
+					<Route exact path={routes.ERRORS.path} element={<ErrorPage />} />
 				</Routes>
 			</Layout>
 		</div>

@@ -9,6 +9,7 @@ import './games-pages-header.scss';
 import { selectUserInfo } from '../../../features/selectors/profile.selectors';
 import { isEmpty } from 'lodash';
 import { logoutUser } from '../../../features/actions/profile.actions';
+import routes from '../../../app/routes/routes';
 
 const GamesPagesHeader = ({ setFilterByGameName }) => {
 	const dispatch = useDispatch();
@@ -55,12 +56,20 @@ const GamesPagesHeader = ({ setFilterByGameName }) => {
 		}
 		return <div />;
 	};
+	const renderInputSearch = () => {
+		if (location.pathname === routes.GAMES_LIST.path) {
+			return (
+				<div className="games-pages-header__filter-by-search">
+					<Input placeholder="Search Game" suffix={<SearchOutlined />} onChange={(e) => onSearch(e)} />
+				</div>
+			);
+		}
+	};
+
 	return (
 		<div className="games-pages-header global-flex-h-between-v-start">
 			{renderPageContent()}
-			<div className="games-pages-header__filter-by-search">
-				<Input placeholder="Search Game" suffix={<SearchOutlined />} onChange={(e) => onSearch(e)} />
-			</div>
+			{renderInputSearch()}
 		</div>
 	);
 };
@@ -68,6 +77,6 @@ GamesPagesHeader.propTypes = {
 	/**
      * Get category filter data
      */
-	setFilterByGameName: PropTypes.func.isRequired
+	setFilterByGameName: PropTypes.func
 };
 export default GamesPagesHeader;

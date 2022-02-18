@@ -1,0 +1,9 @@
+@import '../../../app/_mixins';
+
+.error-page {
+	@include fontSize(30px);
+	&__message {
+		font-weight: bolder;
+		margin-left: 10px;
+	}
+}
