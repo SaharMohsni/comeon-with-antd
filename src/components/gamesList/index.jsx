@@ -6,7 +6,7 @@ import { Empty } from 'antd';
 import { isEmpty } from 'lodash';
 import './games-list.scss';
 import CategoryFilterSection from '../categoryFilterSection';
-const GamesList = ({ gamesList, categoriesList, setFilterBy, filterByKey }) => {
+const GamesList = ({ gamesList, categoriesList, setFilterByCategoryId, filterByCategoryId }) => {
 	// Render games
 	const renderGames = () => {
 		return gamesList.map((game) => {
@@ -33,8 +33,8 @@ const GamesList = ({ gamesList, categoriesList, setFilterBy, filterByKey }) => {
 			<div className="games-list__filter-section">
 				<CategoryFilterSection
 					categoriesList={categoriesList}
-					setFilterBy={setFilterBy}
-					filterByKey={filterByKey}
+					setFilterByCategoryId={setFilterByCategoryId}
+					filterByCategoryId={filterByCategoryId}
 				/>
 			</div>
 		</div>
@@ -52,11 +52,11 @@ GamesList.propTypes = {
 	/**
      * Get category filter data
      */
-	setFilterBy: PropTypes.func,
+	setFilterByCategoryId: PropTypes.func,
 	/**
      * filter key
      */
-	filterByKey: PropTypes.string
+	filterByCategoryId: PropTypes.number
 };
 
 export default GamesList;

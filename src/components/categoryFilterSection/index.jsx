@@ -2,10 +2,10 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import './category-filter-section.scss';
 
-const CategoryFilterSection = ({ categoriesList, setFilterBy, filterByKey }) => {
+const CategoryFilterSection = ({ categoriesList, setFilterByCategoryId, filterByCategoryId }) => {
 	// Filter by category function
 	const handleFilterByCategory = (categoryId) => {
-		setFilterBy(categoryId);
+		setFilterByCategoryId(categoryId);
 	};
 
 	// Render categories
@@ -13,7 +13,7 @@ const CategoryFilterSection = ({ categoriesList, setFilterBy, filterByKey }) => 
 		return categoriesList.map((category) => {
 			return (
 				<div
-					className={`${filterByKey === category.id &&
+					className={`${filterByCategoryId === category.id &&
 						'is-clicked'} category-filter-section__filter-section__content__filter-element`}
 					key={category.id}
 					onClick={() => handleFilterByCategory(category.id)}
@@ -38,11 +38,11 @@ CategoryFilterSection.propTypes = {
 	/**
      * Get category filter data
      */
-	setFilterBy: PropTypes.func,
+	setFilterByCategoryId: PropTypes.func,
 	/**
      * filter key
      */
-	filterByKey: PropTypes.string
+	filterByCategoryId: PropTypes.number
 };
 
 export default CategoryFilterSection;

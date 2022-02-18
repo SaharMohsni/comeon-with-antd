@@ -10,7 +10,7 @@ import { selectUserInfo } from '../../../features/selectors/profile.selectors';
 import { isEmpty } from 'lodash';
 import { logoutUser } from '../../../features/actions/profile.actions';
 
-const GamesPagesHeader = ({ setFilterBy }) => {
+const GamesPagesHeader = ({ setFilterByGameName }) => {
 	const dispatch = useDispatch();
 	const playerInfo = useSelector(selectUserInfo);
 
@@ -19,7 +19,7 @@ const GamesPagesHeader = ({ setFilterBy }) => {
 			dispatch(logoutUser({ username: playerInfo.username }));
 		}
 	};
-	const onSearch = (e) => setFilterBy(e.target.value);
+	const onSearch = (e) => setFilterByGameName(e.target.value);
 	const renderPageContent = () => {
 		if (!isEmpty(playerInfo)) {
 			return (
@@ -68,6 +68,6 @@ GamesPagesHeader.propTypes = {
 	/**
      * Get category filter data
      */
-	setFilterBy: PropTypes.func.isRequired
+	setFilterByGameName: PropTypes.func.isRequired
 };
 export default GamesPagesHeader;
