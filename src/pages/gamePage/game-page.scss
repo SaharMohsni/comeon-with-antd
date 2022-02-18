@@ -1,6 +1,9 @@
 @import '../../app/_mixins';
 
 .game-page {
+	&__header {
+		margin-bottom: 50px;
+	}
 	&__launched-game {
 		margin-top: 50px;
 		min-height: 500px;
